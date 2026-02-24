@@ -1,6 +1,6 @@
 export const resumeData = {
   name: "Zenia Adiwijaya",
-  subtitle: "Building Scalable Products at the Intersection of Data, Systems, and AI",
+  subtitle: "Building and evaluating scalable products at the intersection of data, systems, and AI.",
   headline:
     "AI Product Manager with 5+ years building and scaling ML-powered products across B2B and B2C. Deep expertise in data platforms, AI integration, and systems design. Proven track record launching AI features 0→1, managing ML model lifecycles, and delivering measurable business impact through predictive analytics and intelligent automation. Currently leading AI integration at Fidelity National Financial; previously built ML solutions at MIT and Fortune 500 companies.",
 
