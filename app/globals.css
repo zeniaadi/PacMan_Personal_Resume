@@ -1,0 +1,242 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+@layer base {
+  :root {
+    /* Arcade Dark Theme - Neon Colors */
+    --background: 220 40% 5%; /* Dark navy #0B1220 */
+    --foreground: 220 30% 95%; /* Text white #EAF2FF */
+    --card: 220 40% 7%; /* Card BG #0B1220 with slight transparency */
+    --card-foreground: 220 30% 95%;
+    --popover: 220 40% 7%;
+    --popover-foreground: 220 30% 95%;
+    --primary: 54 100% 50%; /* Neon Yellow #FFE600 */
+    --primary-foreground: 220 40% 5%;
+    --secondary: 189 70% 64%; /* Arcade Cyan #60D0E8 */
+    --secondary-foreground: 220 30% 95%;
+    --muted: 220 20% 15%;
+    --muted-foreground: 215 15% 60%; /* Muted text #9AA7B8 */
+    --accent: 330 60% 67%; /* Neon Pink #E078B0 */
+    --accent-foreground: 220 30% 95%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 220 30% 95%;
+    --border: 220 30% 20%;
+    --input: 220 30% 15%;
+    --ring: 54 100% 50%;
+    --chart-1: 54 100% 50%;
+    --chart-2: 189 70% 64%;
+    --chart-3: 330 60% 67%;
+    --chart-4: 142 71% 45%;
+    --chart-5: 32 95% 44%;
+    --radius: 0.75rem;
+    
+    /* Pac-Man specific colors - Neon Edition */
+    --pacman: 54 100% 50%; /* Neon Yellow #FFE600 */
+    --ghost-blue: 189 70% 64%; /* Arcade Cyan #60D0E8 */
+    --ghost-pink: 330 60% 67%; /* Neon Pink #E078B0 */
+    --ghost-red: 0 84% 60%;
+    --ghost-orange: 32 95% 44%;
+    --pellet: 220 30% 95%;
+    --power-pellet: 54 100% 50%;
+    --cherry: 330 60% 67%;
+    --maze-wall: 189 70% 64%;
+    --glow-primary: 54 100% 50%;
+    --glow-cyan: 189 70% 64%;
+    --glow-pink: 330 60% 67%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+/* Pac-Man animations */
+@keyframes chomp {
+  0%, 100% {
+    clip-path: polygon(100% 0%, 100% 100%, 50% 50%, 100% 0%);
+  }
+  50% {
+    clip-path: polygon(100% 0%, 100% 100%, 50% 50%, 50% 50%);
+  }
+}
+
+@keyframes pulse-glow {
+  0%, 100% {
+    box-shadow: 0 0 5px hsl(var(--primary)), 0 0 10px hsl(var(--primary));
+  }
+  50% {
+    box-shadow: 0 0 10px hsl(var(--primary)), 0 0 20px hsl(var(--primary)), 0 0 30px hsl(var(--primary));
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+}
+
+@keyframes mouth {
+  0%, 100% {
+    transform: scaleY(1);
+  }
+  50% {
+    transform: scaleY(0.1);
+  }
+}
+
+.animate-chomp {
+  animation: chomp 0.3s ease-in-out infinite;
+}
+
+.animate-chomp-svg path {
+  animation: mouth 0.3s ease-in-out infinite;
+  transform-origin: 50% 50%;
+}
+
+.animate-mouth {
+  animation: mouth 0.3s ease-in-out infinite;
+  transform-origin: 50% 50%;
+}
+
+.animate-pulse-glow {
+  animation: pulse-glow 2s ease-in-out infinite;
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: hsl(var(--background));
+}
+
+::-webkit-scrollbar-thumb {
+  background: hsl(var(--primary));
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: hsl(var(--primary) / 0.8);
+}
+
+/* Arcade Grid Background - Checkered Blueprint Style */
+.arcade-grid {
+  background-color: #0a0e17;
+  background-image: 
+    linear-gradient(rgba(96, 208, 232, 0.08) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(96, 208, 232, 0.08) 1px, transparent 1px);
+  background-size: 32px 32px;
+}
+
+/* Vignette Effect */
+.arcade-vignette {
+  position: relative;
+}
+
+.arcade-vignette::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  pointer-events: none;
+  background: radial-gradient(ellipse at center, transparent 0%, transparent 50%, rgba(11, 18, 32, 0.6) 100%);
+  z-index: 1;
+}
+
+/* Center Glow */
+.arcade-center-glow {
+  position: relative;
+}
+
+.arcade-center-glow::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  max-width: 800px;
+  height: 400px;
+  background: radial-gradient(ellipse at center top, rgba(255, 230, 0, 0.08) 0%, transparent 70%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Frosted Glass Card */
+.glass-card {
+  background: rgba(11, 18, 32, 0.8);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(96, 208, 232, 0.2);
+  box-shadow: 
+    0 0 20px rgba(96, 208, 232, 0.1),
+    inset 0 0 20px rgba(96, 208, 232, 0.02);
+}
+
+.glass-card:hover {
+  border-color: rgba(96, 208, 232, 0.4);
+  box-shadow: 
+    0 0 30px rgba(96, 208, 232, 0.2),
+    inset 0 0 20px rgba(96, 208, 232, 0.05);
+}
+
+/* Neon Glow Effects */
+.neon-glow-yellow {
+  filter: drop-shadow(0 0 8px rgba(255, 230, 0, 0.6)) drop-shadow(0 0 20px rgba(255, 230, 0, 0.4));
+}
+
+.neon-glow-cyan {
+  filter: drop-shadow(0 0 8px rgba(96, 208, 232, 0.6)) drop-shadow(0 0 20px rgba(96, 208, 232, 0.4));
+}
+
+.neon-glow-pink {
+  filter: drop-shadow(0 0 8px rgba(224, 120, 176, 0.6)) drop-shadow(0 0 20px rgba(224, 120, 176, 0.4));
+}
+
+/* Neon Text */
+.neon-text-yellow {
+  text-shadow: 0 0 10px rgba(255, 230, 0, 0.5), 0 0 20px rgba(255, 230, 0, 0.3);
+}
+
+.neon-text-cyan {
+  text-shadow: 0 0 10px rgba(96, 208, 232, 0.5), 0 0 20px rgba(96, 208, 232, 0.3);
+}
+
+.neon-text-pink {
+  text-shadow: 0 0 10px rgba(224, 120, 176, 0.5), 0 0 20px rgba(224, 120, 176, 0.3);
+}
+
+/* Level Badge */
+.level-badge {
+  background: linear-gradient(135deg, rgba(96, 208, 232, 0.2), rgba(224, 120, 176, 0.2));
+  border: 1px solid rgba(96, 208, 232, 0.3);
+  font-family: var(--font-arcade);
+}
+
+/* Highlight Strip */
+.highlight-strip {
+  background: linear-gradient(90deg, rgba(255, 230, 0, 0.15), transparent);
+  border-left: 3px solid hsl(var(--primary));
+}
