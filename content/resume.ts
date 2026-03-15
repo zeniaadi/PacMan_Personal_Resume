@@ -194,6 +194,20 @@ export const resumeData = {
 
 export const projectsData = [
   {
+    id: "nutrio-ai",
+    title: "Nutrio AI",
+    description: "A multi-agent AI system that builds personalized weekly meal plans based on your budget, minimizing food waste and optimizing grocery costs across every meal.",
+    url: "https://www.nutrio-ai.com",
+    tags: ["Agentic AI", "Daily Productivity", "Optimization", "Food System"],
+  },
+  {
+    id: "credit-card-go",
+    title: "Credit Card Go",
+    description: "A multi-agent AI system that analyzes your credit cards and tells you exactly which one to use for every purchase to maximize rewards and cashback.",
+    url: "https://v0-creditcardgo.vercel.app/",
+    tags: ["Agentic AI", "Finance", "Optimization"],
+  },
+  {
     id: "nutriolab",
     title: "Nutriolab.io",
     description: "Digital R&D platform for Southeast Asia food industry",
