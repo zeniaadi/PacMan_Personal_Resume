@@ -201,6 +201,13 @@ export const projectsData = [
     tags: ["Agentic AI", "Daily Productivity", "Optimization", "Food System"],
   },
   {
+    id: "credit-card-go",
+    title: "Credit Card Go",
+    description: "Built a multi-agent AI application that ingests credit card benefits and reward structures, then generates optimized spending strategies to ensure maximum return on every transaction.",
+    url: "https://v0-creditcardgo.vercel.app/",
+    tags: ["Agentic AI", "Finance", "Optimization"],
+  },
+  {
     id: "nutriolab",
     title: "Nutriolab.io",
     description: "Digital R&D platform for Southeast Asia food industry",
