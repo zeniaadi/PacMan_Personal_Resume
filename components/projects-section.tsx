@@ -26,7 +26,7 @@ export function ProjectsSection() {
       </div>
 
       {/* Projects Grid - Arcade Cartridge Style */}
-      <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto items-stretch">
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 max-w-4xl mx-auto items-stretch">
         {projectsData.map((project, index) => {
           const ghostColors = ["blue", "pink", "orange", "red"] as const
           const ghostColor = ghostColors[index % ghostColors.length]

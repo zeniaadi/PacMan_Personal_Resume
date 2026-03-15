@@ -31,20 +31,20 @@ export function Nav({ activeSection, onNavigate }: NavProps) {
           </button>
 
           {/* Nav Items */}
-          <div className="flex items-center gap-2 sm:gap-6">
+          <div className="flex items-center gap-1 sm:gap-3">
             {navItems.map((item) => (
               <button
                 key={item.id}
                 onClick={() => onNavigate(item.id)}
                 className={cn(
-                  "flex items-center gap-2 px-3 py-2 rounded-lg transition-all duration-300",
+                  "flex items-center gap-1.5 px-2 sm:px-3 py-2 rounded-lg transition-all duration-300",
                   activeSection === item.id
                     ? "bg-primary/10 text-primary"
                     : "text-muted-foreground hover:text-foreground hover:bg-muted"
                 )}
               >
-                <Ghost color={item.ghost} size={20} />
-                <span className="font-arcade text-[8px] sm:text-[10px]">
+                <Ghost color={item.ghost} size={16} />
+                <span className="font-arcade text-[7px] sm:text-[9px] md:text-[10px]">
                   {item.label}
                 </span>
               </button>
