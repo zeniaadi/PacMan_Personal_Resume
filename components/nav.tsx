@@ -9,9 +9,9 @@ interface NavProps {
 }
 
 const navItems = [
-  { id: "play", label: "PLAY", ghost: "blue" as const },
-  { id: "arcade", label: "ARCADE", ghost: "pink" as const },
-  { id: "stats", label: "STATS", ghost: "orange" as const },
+  { id: "play", label: "PLAY: Background", ghost: "blue" as const },
+  { id: "arcade", label: "ARCADE: Projects", ghost: "pink" as const },
+  { id: "stats", label: "STATS: Skills", ghost: "orange" as const },
 ]
 
 export function Nav({ activeSection, onNavigate }: NavProps) {
