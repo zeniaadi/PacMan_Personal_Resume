@@ -27,7 +27,7 @@ export function StatsSection() {
           SKILL POWER-UPS
         </h3>
 
-        <div className="grid md:grid-cols-3 gap-6 max-w-4xl mx-auto">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
           {/* AI/ML Skills */}
           <SkillCategory
             title="AI / ML"
@@ -60,7 +60,7 @@ export function StatsSection() {
           BONUS LEVELS
         </h3>
 
-        <div className="grid md:grid-cols-3 gap-4 max-w-4xl mx-auto">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 max-w-4xl mx-auto">
           {leadershipData.map((item) => (
             <div
               key={item.id}

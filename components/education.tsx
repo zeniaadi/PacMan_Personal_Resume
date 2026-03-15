@@ -11,7 +11,7 @@ export function Education() {
         EDUCATION POWER-UPS
       </h3>
 
-      <div className="grid md:grid-cols-3 gap-4">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
         {resumeData.education.map((edu) => (
           <div
             key={edu.id}
