@@ -26,7 +26,7 @@ export function ProjectsSection() {
       </div>
 
       {/* Projects Grid - Arcade Cartridge Style */}
-      <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto items-start">
+      <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto items-stretch">
         {projectsData.map((project, index) => {
           const ghostColors = ["blue", "pink", "orange", "red"] as const
           const ghostColor = ghostColors[index % ghostColors.length]
@@ -38,7 +38,7 @@ export function ProjectsSection() {
               target="_blank"
               rel="noopener noreferrer"
               className={cn(
-                "group relative glass-card rounded-xl p-6",
+                "group relative glass-card rounded-xl p-6 flex flex-col",
                 "transition-all duration-300 transform hover:-translate-y-1"
               )}
               style={{
@@ -90,6 +90,9 @@ export function ProjectsSection() {
                   </span>
                 ))}
               </div>
+
+              {/* Spacer to push link to bottom */}
+              <div className="flex-1" />
 
               {/* Link indicator */}
               <div className={cn(
