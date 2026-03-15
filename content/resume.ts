@@ -194,6 +194,13 @@ export const resumeData = {
 
 export const projectsData = [
   {
+    id: "nutrio-ai",
+    title: "Nutrio AI",
+    description: "Multi Agent meal planning assistant",
+    url: "https://www.nutrio-ai.com",
+    tags: ["Agentic AI", "Daily Productivity", "Optimization", "Food System"],
+  },
+  {
     id: "nutriolab",
     title: "Nutriolab.io",
     description: "Digital R&D platform for Southeast Asia food industry",
