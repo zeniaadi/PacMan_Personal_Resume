@@ -46,7 +46,7 @@ export function Hero() {
         </div>
 
         {/* Name with neon glow */}
-        <h1 className="font-arcade text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-primary mb-4 text-balance neon-text-yellow drop-shadow-[0_0_30px_rgba(255,230,0,0.4)]">
+        <h1 className="font-arcade text-xl sm:text-2xl md:text-3xl lg:text-4xl text-primary mb-4 text-balance neon-text-yellow drop-shadow-[0_0_30px_rgba(255,230,0,0.4)] max-w-xl mx-auto">
           {resumeData.name.toUpperCase()}
         </h1>
 
