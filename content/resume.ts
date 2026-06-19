@@ -13,7 +13,7 @@ export const resumeData = {
       period: "May 2026 – Present",
       location: "San Francisco, CA",
       bullets: [
-        "Reach out to me to talk about this!",
+        "Shipping AI insights that matter.",
       ],
       highlights: [],
       type: "experience",
