@@ -24,7 +24,7 @@ export function Nav({ activeSection, onNavigate }: NavProps) {
             onClick={() => onNavigate("play")}
             className="flex items-center gap-3 group"
           >
-            <PacMan size={28} direction="right" isEating={true} />
+            <PacMan size={22} direction="right" isEating={true} />
             <span className="font-arcade text-xs text-primary hidden sm:block">
               ZENIA
             </span>

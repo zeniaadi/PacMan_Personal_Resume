@@ -79,14 +79,6 @@ export function IdCard() {
                     <td className="font-sans text-xs text-foreground/80 pb-1.5 align-middle text-left">Building and optimizing solutions</td>
                   </tr>
                   <tr>
-                    <td className="font-arcade text-[7px] sm:text-[8px] text-muted-foreground tracking-wider w-14 pb-1.5 align-middle pr-3">EMAIL</td>
-                    <td className="pb-1.5 align-middle text-left">
-                      <a href="mailto:zeniaadi@alum.mit.edu" className="font-sans text-xs text-secondary hover:text-primary transition-colors">
-                        zeniaadi@alum.mit.edu
-                      </a>
-                    </td>
-                  </tr>
-                  <tr>
                     <td className="font-arcade text-[7px] sm:text-[8px] text-muted-foreground tracking-wider w-14 align-middle pr-3">LINKS</td>
                     <td className="align-middle text-left">
                       <div className="flex items-center gap-2.5">

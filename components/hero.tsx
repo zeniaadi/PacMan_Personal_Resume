@@ -1,6 +1,6 @@
 "use client"
 
-import { PacMan, Ghost, FoodDot } from "./pac-man"
+import { Ghost, FoodDot } from "./pac-man"
 import { resumeData } from "@/content/resume"
 import { IdCard } from "./id-card"
 
@@ -9,17 +9,17 @@ export function Hero() {
     <section className="min-h-screen flex flex-col items-center justify-center relative overflow-hidden px-4 arcade-center-glow">
       {/* Background Decorations */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        {/* Floating ghosts with neon glow - More visible */}
-        <div className="absolute top-20 left-10 opacity-70 neon-glow-cyan animate-float">
+        {/* Floating ghosts with neon glow - subtle on mobile */}
+        <div className="absolute top-20 left-10 opacity-25 sm:opacity-70 neon-glow-cyan animate-float scale-50 sm:scale-100 origin-top-left">
           <Ghost color="blue" size={60} />
         </div>
-        <div className="absolute top-40 right-20 opacity-70 neon-glow-pink animate-float" style={{ animationDelay: "0.5s" }}>
+        <div className="absolute top-40 right-20 opacity-25 sm:opacity-70 neon-glow-pink animate-float scale-50 sm:scale-100 origin-top-right" style={{ animationDelay: "0.5s" }}>
           <Ghost color="pink" size={50} />
         </div>
-        <div className="absolute bottom-40 left-1/4 opacity-60 animate-float" style={{ animationDelay: "1s" }}>
+        <div className="absolute bottom-40 left-1/4 opacity-20 sm:opacity-60 animate-float scale-50 sm:scale-100 origin-bottom-left" style={{ animationDelay: "1s" }}>
           <Ghost color="orange" size={45} />
         </div>
-        <div className="absolute bottom-20 right-10 opacity-60 animate-float" style={{ animationDelay: "1.5s" }}>
+        <div className="absolute bottom-20 right-10 opacity-20 sm:opacity-60 animate-float scale-50 sm:scale-100 origin-bottom-right" style={{ animationDelay: "1.5s" }}>
           <Ghost color="red" size={55} />
         </div>
 
@@ -37,16 +37,8 @@ export function Hero() {
 
       {/* Main Content */}
       <div className="relative z-10 text-center max-w-4xl mx-auto">
-        {/* Animated Pac-Man above name */}
-        <div className="flex items-center justify-center gap-3 mb-8 drop-shadow-[0_0_20px_rgba(255,230,0,0.5)]">
-          <FoodDot size={10} />
-          <FoodDot size={10} />
-          <FoodDot size={10} />
-          <PacMan size={56} direction="right" isEating={true} />
-        </div>
-
         {/* Name with neon glow */}
-        <h1 className="font-arcade text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-primary mb-4 text-balance neon-text-yellow drop-shadow-[0_0_30px_rgba(255,230,0,0.4)]">
+        <h1 className="font-arcade text-xl sm:text-2xl md:text-3xl lg:text-4xl text-primary mb-4 text-balance neon-text-yellow drop-shadow-[0_0_30px_rgba(255,230,0,0.4)] max-w-xl mx-auto">
           {resumeData.name.toUpperCase()}
         </h1>
 

@@ -1,15 +1,29 @@
 export const resumeData = {
   name: "Zenia Adiwijaya",
-  subtitle: "Building and evaluating scalable products at the intersection of data, systems, and AI.",
+  subtitle: "Building AI products that scale.",
   headline:
     "AI Product Manager with 5+ years building and scaling ML-powered products across B2B and B2C. Deep expertise in data platforms, AI integration, and systems design. Proven track record launching AI features 0→1, managing ML model lifecycles, and delivering measurable business impact through predictive analytics and intelligent automation. Currently leading AI integration at Fidelity National Financial; previously built ML solutions at MIT and Fortune 500 companies.",
 
   experience: [
     {
+      id: "scale-ai",
+      company: "Scale AI",
+      url: "https://scale.com/",
+      role: "AI Product Manager",
+      period: "May 2026 – Present",
+      location: "San Francisco, CA",
+      bullets: [
+        "Shipping AI insights that matter.",
+      ],
+      highlights: [],
+      type: "experience",
+    },
+    {
       id: "servicelink",
       company: "ServiceLink (Fidelity National Financial)",
+      url: "https://www.servicelink.com/",
       role: "Product Manager, Data Science & BI",
-      period: "Aug 2023 – Present",
+      period: "Aug 2023 – Apr 2026",
       location: "Remote, Palo Alto",
       bullets: [
         "Lead the product migration & AI integration for two-sided Default Mortgage Service Platform, leading the analytics features & working cross-functionally to consolidate 500+ reports into product solutions, achieving 70% report reduction & better user insights",
@@ -34,6 +48,7 @@ export const resumeData = {
     {
       id: "potlikker",
       company: "Potlikker Capital",
+      url: "https://www.potlikkercapital.com/",
       role: "Investment Associate",
       period: "2023 – Present",
       location: "Remote, Part Time",
@@ -61,6 +76,7 @@ export const resumeData = {
     {
       id: "nutriolab",
       company: "Nutriolab.io",
+      url: "https://nutriolab.io/",
       role: "Co-Founder & CEO",
       period: "Jun 2021 – May 2022",
       location: "Remote",
