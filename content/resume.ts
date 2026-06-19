@@ -8,9 +8,10 @@ export const resumeData = {
     {
       id: "scale-ai",
       company: "Scale AI",
+      url: "https://scale.com/",
       role: "AI Product Manager",
       period: "May 2026 – Present",
-      location: "",
+      location: "San Francisco, CA",
       bullets: [
         "Reach out to me to talk about this!",
       ],
@@ -20,6 +21,7 @@ export const resumeData = {
     {
       id: "servicelink",
       company: "ServiceLink (Fidelity National Financial)",
+      url: "https://www.servicelink.com/",
       role: "Product Manager, Data Science & BI",
       period: "Aug 2023 – Apr 2026",
       location: "Remote, Palo Alto",
@@ -46,6 +48,7 @@ export const resumeData = {
     {
       id: "potlikker",
       company: "Potlikker Capital",
+      url: "https://www.potlikkercapital.com/",
       role: "Investment Associate",
       period: "2023 – Present",
       location: "Remote, Part Time",

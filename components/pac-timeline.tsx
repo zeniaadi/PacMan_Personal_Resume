@@ -7,6 +7,7 @@ import { cn } from "@/lib/utils"
 interface TimelineItem {
   id: string
   company: string
+  url?: string
   role: string
   period: string
   location: string
@@ -181,12 +182,26 @@ export function PacTimeline({ items, sectionTitle, sectionSubtitle }: PacTimelin
                         {item.role}
                       </h3>
                       <span className="hidden sm:inline text-muted-foreground">|</span>
-                      <p className={cn(
-                        "font-sans font-medium text-sm sm:text-base",
-                        item.type === "fellowship" ? "text-accent" : "text-secondary"
-                      )}>
-                        {item.company}
-                      </p>
+                      {item.url ? (
+                        <a
+                          href={item.url}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className={cn(
+                            "font-sans font-medium text-sm sm:text-base underline decoration-dotted underline-offset-4 transition-opacity hover:opacity-80",
+                            item.type === "fellowship" ? "text-accent" : "text-secondary"
+                          )}
+                        >
+                          {item.company}
+                        </a>
+                      ) : (
+                        <p className={cn(
+                          "font-sans font-medium text-sm sm:text-base",
+                          item.type === "fellowship" ? "text-accent" : "text-secondary"
+                        )}>
+                          {item.company}
+                        </p>
+                      )}
                     </div>
                     {/* Date and Location Row */}
                     <div className="flex flex-wrap items-center gap-x-2 gap-y-1 text-xs sm:text-sm">
