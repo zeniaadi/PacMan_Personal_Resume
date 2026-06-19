@@ -6,10 +6,22 @@ export const resumeData = {
 
   experience: [
     {
+      id: "scale-ai",
+      company: "Scale AI",
+      role: "AI Product Manager",
+      period: "May 2026 – Present",
+      location: "",
+      bullets: [
+        "Reach out to me to talk about this!",
+      ],
+      highlights: [],
+      type: "experience",
+    },
+    {
       id: "servicelink",
       company: "ServiceLink (Fidelity National Financial)",
       role: "Product Manager, Data Science & BI",
-      period: "Aug 2023 – Present",
+      period: "Aug 2023 – Apr 2026",
       location: "Remote, Palo Alto",
       bullets: [
         "Lead the product migration & AI integration for two-sided Default Mortgage Service Platform, leading the analytics features & working cross-functionally to consolidate 500+ reports into product solutions, achieving 70% report reduction & better user insights",
