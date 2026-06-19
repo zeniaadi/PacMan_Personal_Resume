@@ -1,6 +1,6 @@
 "use client"
 
-import { PacMan, Ghost, FoodDot } from "./pac-man"
+import { Ghost, FoodDot } from "./pac-man"
 import { resumeData } from "@/content/resume"
 import { IdCard } from "./id-card"
 
@@ -37,14 +37,6 @@ export function Hero() {
 
       {/* Main Content */}
       <div className="relative z-10 text-center max-w-4xl mx-auto">
-        {/* Animated Pac-Man above name */}
-        <div className="flex items-center justify-center gap-3 mb-8 drop-shadow-[0_0_20px_rgba(255,230,0,0.5)]">
-          <FoodDot size={10} />
-          <FoodDot size={10} />
-          <FoodDot size={10} />
-          <PacMan size={56} direction="right" isEating={true} className="scale-[0.65] sm:scale-100" />
-        </div>
-
         {/* Name with neon glow */}
         <h1 className="font-arcade text-xl sm:text-2xl md:text-3xl lg:text-4xl text-primary mb-4 text-balance neon-text-yellow drop-shadow-[0_0_30px_rgba(255,230,0,0.4)] max-w-xl mx-auto">
           {resumeData.name.toUpperCase()}
