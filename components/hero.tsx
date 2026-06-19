@@ -9,17 +9,17 @@ export function Hero() {
     <section className="min-h-screen flex flex-col items-center justify-center relative overflow-hidden px-4 arcade-center-glow">
       {/* Background Decorations */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        {/* Floating ghosts with neon glow - More visible */}
-        <div className="absolute top-20 left-10 opacity-70 neon-glow-cyan animate-float">
+        {/* Floating ghosts with neon glow - subtle on mobile */}
+        <div className="absolute top-20 left-10 opacity-25 sm:opacity-70 neon-glow-cyan animate-float scale-50 sm:scale-100 origin-top-left">
           <Ghost color="blue" size={60} />
         </div>
-        <div className="absolute top-40 right-20 opacity-70 neon-glow-pink animate-float" style={{ animationDelay: "0.5s" }}>
+        <div className="absolute top-40 right-20 opacity-25 sm:opacity-70 neon-glow-pink animate-float scale-50 sm:scale-100 origin-top-right" style={{ animationDelay: "0.5s" }}>
           <Ghost color="pink" size={50} />
         </div>
-        <div className="absolute bottom-40 left-1/4 opacity-60 animate-float" style={{ animationDelay: "1s" }}>
+        <div className="absolute bottom-40 left-1/4 opacity-20 sm:opacity-60 animate-float scale-50 sm:scale-100 origin-bottom-left" style={{ animationDelay: "1s" }}>
           <Ghost color="orange" size={45} />
         </div>
-        <div className="absolute bottom-20 right-10 opacity-60 animate-float" style={{ animationDelay: "1.5s" }}>
+        <div className="absolute bottom-20 right-10 opacity-20 sm:opacity-60 animate-float scale-50 sm:scale-100 origin-bottom-right" style={{ animationDelay: "1.5s" }}>
           <Ghost color="red" size={55} />
         </div>
 
@@ -42,7 +42,7 @@ export function Hero() {
           <FoodDot size={10} />
           <FoodDot size={10} />
           <FoodDot size={10} />
-          <PacMan size={56} direction="right" isEating={true} />
+          <PacMan size={56} direction="right" isEating={true} className="scale-[0.65] sm:scale-100" />
         </div>
 
         {/* Name with neon glow */}
